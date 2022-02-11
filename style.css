@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+    --sedan: hsl(31, 77%, 52%);
+    --suv: hsl(184, 100%, 22%);
+    --luxury: hsl(179, 100%, 13%);
+}
+
+html {
+    box-sizing: border-box;
+    
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    height: 100vh;
+    background-color: hsl(0, 0%, 95%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h2, p {
+    margin: 0;
+}
+
+h2 {
+    font-family: 'Big Shoulders Display';
+    font-size: 3.15rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: hsl(0, 0%, 95%);
+    margin: 2.5rem 0;
+}
+
+p {
+    margin-bottom: 5.3125rem;
+}
+
+.container {
+    display: flex;
+    width: 920px;
+    color: hsla(0, 0%, 100%, 0.75);
+}
+
+.container > div {
+    flex: 1;
+    padding: 3.125rem;
+}
+
+#sedan {
+    background-color: var(--sedan);
+    border-radius: 0.3125rem 0 0 0.3125rem;
+}
+
+#suv {
+    background-color: var(--suv);
+}
+
+#luxury {
+    background-color: var(--luxury);
+    border-radius: 0 0.3125rem 0.3125rem 0;
+}
+
+button {
+    width: 9.125rem;
+    height: 3.125rem;
+    font-family: inherit;
+    font-weight: 400;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+#sedan button {
+    color: var(--sedan);
+}
+
+#sedan button:hover {
+    background-color: var(--sedan);
+    color: hsl(0, 0%, 95%);
+    border: hsl(0, 0%, 95%) solid 2px;
+}
+
+#suv button {
+    color: var(--suv);
+}
+
+#suv button:hover {
+    background-color: var(--suv);
+    color: hsl(0, 0%, 95%);
+    border: hsl(0, 0%, 95%) solid 2px;
+}
+
+
+#luxury button {
+    color: var(--luxury);
+}
+
+#luxury button:hover {
+    background-color: var(--luxury);
+    color: hsl(0, 0%, 95%);
+    border: hsl(0, 0%, 95%) solid 2px;
+}
+
+
+.attribution {
+    font-size: inherit;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    top: 5rem;
+}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media screen and (max-width: 920px) {
+    body {
+        min-height: 100%;
+        height: auto;
+        padding: 88px 20px;
+    }
+    .container {
+        flex-direction: column;
+        width: auto;
+    }
+
+    #sedan {
+        border-radius: 0.3125rem 0.3125rem 0 0;
+    }
+
+    #luxury {
+        border-radius: 0 0 0.3125rem 0.3125rem;
+    }
+
+}
